@@ -1,0 +1,8 @@
+# 비교·미리보기용 산출물은 올리지 않는다
+compare-*.html
+_preview_*.html
+*.xlsx
+*.pdf
+!materials/papers/*.pdf
+Thumbs.db
+.DS_Store
