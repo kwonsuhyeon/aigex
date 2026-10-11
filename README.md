@@ -4,10 +4,9 @@
 
 - 한국어: https://kwonsuhyeon.github.io/aigex/
 - 中文: https://kwonsuhyeon.github.io/aigex/?lang=zh
-- 디자인 B: 주소 뒤에 `?theme=card` (기본은 A `?theme=navy`)
 
-화면 오른쪽 위로 마우스를 올리면 언어(KO / 中文)와 디자인(A / B) 버튼이 나타납니다.
-키보드: ← → 이동, `L` 언어 전환, `T` 디자인 전환.
+화면 오른쪽 위로 마우스를 올리면 언어(KO / 中文) 버튼이 나타납니다.
+키보드: ← → 이동, `L` 언어 전환.
 
 ## 실습 자료
 

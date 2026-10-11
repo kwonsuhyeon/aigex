@@ -369,10 +369,6 @@ body.show-top .lang-toggle,.lang-toggle:focus-within{opacity:1;transform:none}
 </head>
 <body>
 
-<div class="theme-toggle lang-toggle" role="group" aria-label="Design">
-  <button type="button" data-theme="navy" aria-pressed="false">A</button>
-  <button type="button" data-theme="card" aria-pressed="false">B</button>
-</div>
 <div class="lang-toggle" role="group" aria-label="Language">
   <button type="button" data-lang="ko" aria-pressed="true">KO</button>
   <button type="button" data-lang="zh" aria-pressed="false">中文</button>
@@ -410,7 +406,7 @@ body.show-top .lang-toggle,.lang-toggle:focus-within{opacity:1;transform:none}
 <section class="slide content" data-ch="0" data-id="p02" data-nav="개요">
 <header class="hdr"><span class="sec" data-i="p02.sec">과정 개요</span></header>
 <h2 class="stitle" data-i="p02.title">AI와 함께 만드는 평가문항: 생성부터 검토까지</h2>
-<div class="body" style="justify-content:center">
+<div class="body" style="padding-top:20px">
 <p class="lead-p" data-i="p02.3">본 특강은 교육평가에서 생성형 AI의 활용 가능성과 한계를 이해하고, 지필평가 문항의 생성과 검토에 AI를 활용하는 방법을 살펴보는 과정이다. 자동문항생성 관련 연구와 실제 개발 사례를 통해 문항 생성 절차와 주요 검토 기준을 알아본다. 이후 Gemini와 NotebookLM을 활용하여 학습자료를 바탕으로 간단한 평가문항을 생성하고, 내용의 정확성, 학습목표와의 부합성, 질문과 정답의 명확성을 검토하는 실습을 진행한다. 이를 통해 AI가 생성한 문항을 교육적 관점에서 판단하고 개선하는 경험을 제공한다.</p>
 </div>
 </section>
@@ -418,7 +414,7 @@ body.show-top .lang-toggle,.lang-toggle:focus-within{opacity:1;transform:none}
 <section class="slide content" data-ch="0" data-id="p03">
 <header class="hdr"><span class="sec" data-i="p03.sec">과정 개요</span></header>
 <h2 class="stitle" data-i="p03.title">학습목표</h2>
-<div class="body" style="justify-content:center">
+<div class="body" style="padding-top:20px">
 <ol class="goals">
 <li data-i="p03.3">생성형 AI의 한계를 설명할 수 있다.</li>
 <li data-i="p03.4">자동문항생성 사례의 문항 생성 절차를 설명할 수 있다.</li>
@@ -1206,12 +1202,11 @@ body.show-top .lang-toggle,.lang-toggle:focus-within{opacity:1;transform:none}
 const FTR_SVG='<svg viewBox="0 0 1920 104" preserveAspectRatio="none" aria-hidden="true">'
   +'<path fill="var(--brand)" d="M0 0H650L585 92Q576 104 560 104H0Z"/>'
   +'<path fill="var(--accent)" d="M690 19H1920V104H604L668 30Q676 19 690 19Z"/></svg>';
-/* 테마: ?theme=navy|card > 마지막 선택 > 빌드 기본값 */
+/* 테마: ?theme=card 가 있으면 B, 없으면 빌드 기본값(A navy) */
 const Theme={
   init(){
     const q=new URLSearchParams(location.search).get('theme');
-    let saved=null;try{saved=localStorage.getItem('inha-theme')}catch(e){}
-    const t=q||saved;
+    const t=q;  /* 기본 디자인 A(navy) 확정. B는 ?theme=card 로만 연다 */
     if(t==='navy'||t==='card')document.documentElement.dataset.theme=t;
     document.querySelectorAll('.theme-toggle button').forEach(b=>{
       b.setAttribute('aria-pressed',String(b.dataset.theme===document.documentElement.dataset.theme));
@@ -1280,7 +1275,7 @@ Lang.init();
 Theme.init();
 /* 화면 위쪽 80px 안으로 마우스를 올리면 언어·디자인 버튼을 보인다 (하단은 deck-nav 영역) */
 addEventListener('mousemove',e=>document.body.classList.toggle('show-top',e.clientY<80));
-addEventListener('keydown',e=>{if((e.key==='t'||e.key==='T')&&!e.ctrlKey&&!e.metaKey)Theme.set(document.documentElement.dataset.theme==='navy'?'card':'navy')});
+
 
 /* ===========================================
    목차: data-goto="앵커" 를 가진 항목에 슬라이드 번호를 붙이고 클릭 이동
