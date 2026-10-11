@@ -3,6 +3,5 @@ compare-*.html
 _preview_*.html
 *.xlsx
 *.pdf
-!materials/papers/*.pdf
 Thumbs.db
 .DS_Store
