@@ -360,9 +360,11 @@ body.show-top .lang-toggle,.lang-toggle:focus-within{opacity:1;transform:none}
 
 @media print{
   @page{size:1920px 1080px;margin:0}
-  html,body{overflow:visible;background:none}
-  .deck-viewport{position:static}
-  .deck-stage{position:static;transform:none!important}
+  html,body{overflow:visible!important;height:auto!important;background:none}
+  .deck-viewport{position:static;overflow:visible}
+  .deck-stage{position:static;transform:none!important;width:1920px;height:auto}
+  .slide{break-after:page;break-inside:avoid;overflow:hidden}
+  .deck-nav,#deckNav,[class*="deck-nav"]{display:none!important}
   .slide{position:relative;display:block!important;page-break-after:always;width:1920px;height:1080px}
   .lang-toggle,.deck-controls{display:none}
 }
