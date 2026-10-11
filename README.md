@@ -20,8 +20,6 @@ Gemini › 설정 › 스킬 › 업로드에서 ZIP 파일을 올린 뒤 `/스�
 
 ## 참고문헌
 
-- Tan, B., Armoush, N., Mazzullo, E., Bulut, O., & Gierl, M. J. (2025). A review of automatic item generation techniques leveraging large language models. *International Journal of Assessment Tools in Education, 12*(2), 317–340. https://doi.org/10.21449/ijate.1602294
-- Song, Y., Li, H., & Zheng, Q. (2026). Multi-agent automated item generation based on large language models. *Educational Technology & Society, 29*(2), 233–248. https://doi.org/10.30191/ETS.202604_29(2).SP02
 - 심희수, 박인우 (2025). 생성형 AI(Generative AI) 피드백 활용 학습 효과에 대한 메타분석. *교육정보미디어연구, 31*(2), 567–595.
 - 유다선 (2026). 직업훈련에서의 생성형 AI-인간 협업평가에 대한 탐색적 접근: 반도체 설계 프로젝트 평가를 중심으로 [박사학위논문, 한국기술교육대학교].
 - 황민호 (2026). *하네스 엔지니어링 with 클로드 코드*. 한빛미디어.
